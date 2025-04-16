@@ -63,7 +63,7 @@ interface Technology {
 
 ## 🌐 Demo en vivo
 
-👉 [Ver demo en StackBlitz](https://stackblitz.com)
+👉 [Ver demo](https://stackblitz.com)
 
 ## 🧪 Ejemplo totalmente personalizado
 
@@ -87,7 +87,7 @@ npm publish
 
 ## 🤝 Contribuciones
 
-PRs y sugerencias son bienvenidas en GitHub
+PRs y sugerencias son bienvenidas
 
 ![npm](https://img.shields.io/npm/v/react-tech-slider)
 
