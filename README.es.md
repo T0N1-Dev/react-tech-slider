@@ -1,23 +1,23 @@
 # 📛 react-tech-slider
 
-A reusable React component for displaying a sliding list of icons with continuous animation. Perfect for portfolios, agencies, landing pages, etc.
+Un componente React reutilizable para mostrar una lista deslizante de iconos con animación continua. Ideal para portafolios, agencias, landings, etc.
 
 ---
 
-## 🚀 Installation
+## 🚀 Instalación
 
 ```bash
 npm install react-tech-slider
 ```
 ---
 
-## 🌐 Live Demo
+## 🌐 Demo en vivo
 
-👉 [View Demo](https://stackblitz.com)
+👉 [Ver demo](https://stackblitz.com)
 
 ---
 
-## ✅ Basic Usage
+## ✅ Uso básico
 
 ```tsx
 import { Slider } from 'react-tech-slider/all-in-one';
@@ -43,16 +43,16 @@ export const techStack = [
 <Slider technologies={techStack} />
 ```
 
-## ✨ Available Props
+## ✨ Props disponibles
 
-| Prop | Type | Required | Description |
+| Prop | Tipo | Requerido | Descripción |
 |------|------|-----------|-------------|
-| `technologies` | `Technology[]` | ✅ | Array of technologies to display |
-| `borderColor` | `string` | ❌ | Color of top and bottom borders (#hex) |
-| `backgroundColor` | `string` | ❌ | Background color of the list (#hex) |
-| `borderWidth` | `number` | ❌ | Border width (px) |
-| `iconWidth` | `number` | ❌ | Icon width (rem) |
-| `iconHeight` | `number` | ❌ | Icon height (rem) |
+| `technologies` | `Technology[]` | ✅ | Array de tecnologías a mostrar |
+| `borderColor` | `string` | ❌ | Color del borde superior e inferior (#hex) |
+| `backgroundColor` | `string` | ❌ | Color de fondo de la lista (#hex) |
+| `borderWidth` | `number` | ❌ | Ancho del borde (px) |
+| `iconWidth` | `number` | ❌ | Ancho del icono (rem) |
+| `iconHeight` | `number` | ❌ | Alto del icono (rem) |
 
 ### Interface
 
@@ -64,13 +64,13 @@ interface Technology {
 }
 ```
 
-## 🎨 Customization
+## 🎨 Personalización
 
-- Supports SVG images as URLs or JSX components
-- Width, color and number of items are dynamic via props
-- Adaptable styles with media queries and CSS variables
+- Soporta imágenes SVG como URLs o componentes JSX
+- Ancho, color y cantidad de ítems son dinámicos vía props
+- Estilos adaptables con media queries y variables CSS
 
-## 🧪 Fully Customized Example
+## 🧪 Ejemplo totalmente personalizado
 
 ```tsx
 <Slider 
@@ -83,16 +83,16 @@ interface Technology {
 />
 ```
 
-## 📦 Build and Publish
+## 📦 Build y publicación
 
 ```bash
 npm run build
 npm publish
 ```
 
-## 🤝 Contributions
+## 🤝 Contribuciones
 
-Pull requests and suggestions are welcome at  
+Pull requests y sugerencias son bienvenidas en  
 👉 [https://github.com/T0N1-Dev/react-tech-slider](https://github.com/T0N1-Dev/react-tech-slider)
 
 

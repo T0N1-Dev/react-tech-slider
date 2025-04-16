@@ -50,5 +50,13 @@
       "import": "./dist/all-in-one.js",
       "types": "./dist/all-in-one.d.ts"
     }
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/T0N1-Dev/react-tech-slider"
+  },
+  "bugs": {
+    "url": "https://github.com/T0N1-Dev/react-tech-slider/issues"
+  },
+  "homepage": "https://github.com/T0N1-Dev/react-tech-slider#readme"
 }
