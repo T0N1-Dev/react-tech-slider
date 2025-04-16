@@ -2,15 +2,18 @@
 
 Un componente React reutilizable para mostrar una lista deslizante de iconos con animación continua. Ideal para portafolios, agencias, landings, etc.
 
+
 ## 🚀 Instalación
 
 ```bash
 npm install react-tech-slider
 ```
 
+
 ## 🌐 Demo en vivo
 
 👉 [Ver demo](https://stackblitz.com)
+
 
 ## ✅ Uso básico
 
