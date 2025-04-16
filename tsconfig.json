@@ -1,0 +1,18 @@
+// tsconfig.json
+{
+    "compilerOptions": {
+      "target": "ESNext",
+      "module": "ESNext",
+      "jsx": "react-jsx",
+      "declaration": true,
+      "emitDeclarationOnly": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "moduleResolution": "node",
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "outDir": "dist"
+    },
+    "include": ["src"]
+  }
+  

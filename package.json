@@ -1,0 +1,54 @@
+{
+  "name": "react-tech-slider",
+  "version": "1.2.10",
+  "description": "Reusable React component slider for showcasing technologies",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/Slider.d.ts",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "keywords": [
+    "react",
+    "component",
+    "slider",
+    "technologies",
+    "brands",
+    "animation",
+    "infinite"
+  ],
+  "author": "T0N1",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@babel/preset-react": "^7.26.3",
+    "@babel/preset-typescript": "^7.27.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-multi-entry": "^6.0.1",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@types/react": "^19.1.1",
+    "@types/react-dom": "^19.1.2",
+    "rollup": "^2.79.2",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "typescript": "^5.8.3"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/Slider.d.ts"
+    },
+    "./all-in-one": {
+      "import": "./dist/all-in-one.js",
+      "types": "./dist/all-in-one.d.ts"
+    }
+  }
+}
