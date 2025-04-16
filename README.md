@@ -8,6 +8,10 @@ Un componente React reutilizable para mostrar una lista deslizante de iconos con
 npm install react-tech-slider
 ```
 
+## 🌐 Demo en vivo
+
+👉 [Ver demo](https://stackblitz.com)
+
 ## ✅ Uso básico
 
 ```tsx
@@ -60,10 +64,6 @@ interface Technology {
 - Soporta imágenes SVG como URLs o componentes JSX
 - Ancho, color y cantidad de ítems son dinámicos vía props
 - Estilos adaptables con media queries y variables CSS
-
-## 🌐 Demo en vivo
-
-👉 [Ver demo](https://stackblitz.com)
 
 ## 🧪 Ejemplo totalmente personalizado
 
