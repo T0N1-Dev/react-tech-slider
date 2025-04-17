@@ -97,6 +97,6 @@ Pull requests and suggestions are welcome at
 
 
 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black?logo=github)](https://github.com/T0N1-Dev/react-tech-slider)
-[![npm](https://www.npmjs.com/package/react-tech-slider?activeTab=readme)](https://img.shields.io/npm/v/react-tech-slider)
+[![npm](https://img.shields.io/npm/v/react-tech-slider)](https://www.npmjs.com/package/react-tech-slider?activeTab=readme)
 
 
