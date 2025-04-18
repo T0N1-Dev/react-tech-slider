@@ -1,13 +1,13 @@
 import './slider.css';
 
-export interface Technology {
+export interface Brand {
   id: number;
   name: string;
   img: string;
 }
 
 export interface SliderProps {
-  technologies: Technology[];
+  brandsList: Brand[];
   borderWidth?: number;
   borderColor?: string;
   backgroundColor?: string;
@@ -16,7 +16,7 @@ export interface SliderProps {
 }
 
 export const Slider: React.FC<SliderProps> = ({ 
-  technologies, 
+  brandsList, 
   borderWidth = 1, 
   borderColor = '#7c05d8',
   backgroundColor = '#00000033',
@@ -28,14 +28,14 @@ export const Slider: React.FC<SliderProps> = ({
       className="wrapper"
       style={
         {
-          '--amount-technologies': technologies.length,
+          '--amount-brands': brandsList.length,
           borderTop: `${borderWidth}px solid ${borderColor}`,
           borderBottom: `${borderWidth}px solid ${borderColor}`,
           backgroundColor: `${backgroundColor}`
         } as React.CSSProperties
       }
     >
-      {technologies.map(({ id, name, img }, index) => (
+      {brandsList.map(({ id, name, img }, index) => (
         <div
           key={id}
           className={ `item item${id}` }
@@ -44,7 +44,7 @@ export const Slider: React.FC<SliderProps> = ({
           <img
             src={img}
             alt={`${name}-icon`}
-            className="technology-slider"
+            className="brand-slider"
             style={{width: `${iconWidth}rem`, height: `${iconHeight}rem`}}
             width="50"
             height="50"

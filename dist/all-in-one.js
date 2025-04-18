@@ -1,1 +1,0 @@
-export{Slider}from"./index.js";import"react";if("undefined"!=typeof document){if(!document.querySelector('link[href*="react-tech-slider/dist/index.css"]')){const e=document.createElement("link");e.rel="stylesheet",e.href="https://unpkg.com/react-tech-slider@latest/dist/index.css",document.head.appendChild(e)}}
