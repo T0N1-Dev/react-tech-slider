@@ -24,7 +24,7 @@ export const Slider: React.FC<SliderProps> = ({
   borderWidth = 1, 
   borderColor = '#7c05d8',
   backgroundColor = '#00000033',
-  iconWidth = 5
+  iconWidth
 }) => {
   return (
     <div 
@@ -49,10 +49,12 @@ export const Slider: React.FC<SliderProps> = ({
             alt={`${name}-icon`}
             className={`brand-slider ${className ?? ''}`}
             style={{
-              width: width ? `${width}rem` : `${iconWidth}rem`,
-              height: height ? `${height}rem` : 'auto',
+              ...(width || iconWidth
+                ? { width: `${width ?? iconWidth}rem` }
+                : {}),
+              ...(height ? { height: `${height}rem` } : {}),
               ...style
-            }}
+            }}            
             loading="lazy"
           />
         </div>
