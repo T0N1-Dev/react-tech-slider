@@ -5,6 +5,10 @@ export interface Brand {
   id: number;
   name: string;
   img: string;
+  width?: number; // rem
+  height?: number; // rem
+  style?: React.CSSProperties; 
+  className?: string;
 }
 
 export interface SliderProps {
@@ -34,7 +38,7 @@ export const Slider: React.FC<SliderProps> = ({
         } as React.CSSProperties
       }
     >
-      {brandsList.map(({ id, name, img }, index) => (
+      {brandsList.map(({ id, name, img, width, height, style, className }, index) => (
         <div
           key={id}
           className={ `item item${id}` }
@@ -43,10 +47,12 @@ export const Slider: React.FC<SliderProps> = ({
           <img
             src={img}
             alt={`${name}-icon`}
-            className="brand-slider"
-            style={{width: `${iconWidth}`}}
-            width="50"
-            height="50"
+            className={`brand-slider ${className ?? ''}`}
+            style={{
+              width: width ? `${width}rem` : `${iconWidth}rem`,
+              height: height ? `${height}rem` : 'auto',
+              ...style
+            }}
             loading="lazy"
           />
         </div>

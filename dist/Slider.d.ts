@@ -4,6 +4,10 @@ export interface Brand {
     id: number;
     name: string;
     img: string;
+    width?: number;
+    height?: number;
+    style?: React.CSSProperties;
+    className?: string;
 }
 export interface SliderProps {
     brandsList: Brand[];
