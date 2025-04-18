@@ -13,8 +13,12 @@ export default {
     {
       dir: 'dist',
       format: 'esm',
-      entryFileNames: 'index.js',
-    },
+      entryFileNames: '[name].js',
+      globals: {
+        react: 'React',
+        'react-dom': 'ReactDOM'
+      }
+    }
   ],
   plugins: [
     resolve({ extensions: ['.js', '.jsx', '.ts', '.tsx'] }),
