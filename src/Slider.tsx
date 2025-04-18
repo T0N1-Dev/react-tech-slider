@@ -1,4 +1,5 @@
 import './slider.css';
+import React from 'react';
 
 export interface Brand {
   id: number;
