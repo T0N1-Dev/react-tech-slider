@@ -1,6 +1,6 @@
 {
   "name": "react-tech-slider",
-  "version": "1.5.12",
+  "version": "1.5.13",
   "description": "Reusable React component slider for showcasing technologies",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
