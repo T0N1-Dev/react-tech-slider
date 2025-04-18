@@ -7,14 +7,13 @@ import copy from 'rollup-plugin-copy';
 
 export default {
   input: {
-    index: 'src/Slider.tsx',
-    'all-in-one': 'index.ts',
+    index: 'index.ts',
   },
   output: [
     {
       dir: 'dist',
       format: 'esm',
-      entryFileNames: '[name].js',
+      entryFileNames: 'index.js',
     },
   ],
   plugins: [
@@ -30,12 +29,7 @@ export default {
       extract: 'index.css',
       minimize: true,
     }),
-    terser(),
-    copy({
-      targets: [
-        { src: 'dist/Slider.d.ts', dest: 'dist', rename: 'all-in-one.d.ts' }
-      ]
-    })
+    terser()
   ],
   external: ['react', 'react-dom'],
 };

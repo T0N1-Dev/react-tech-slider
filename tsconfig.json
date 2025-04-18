@@ -11,8 +11,10 @@
       "moduleResolution": "node",
       "strict": true,
       "forceConsistentCasingInFileNames": true,
+      "rootDir": "src",
       "outDir": "dist"
     },
-    "include": ["src", "tests"]
+    "include": ["src"],
+    "exclude": ["tests"]
   }
   

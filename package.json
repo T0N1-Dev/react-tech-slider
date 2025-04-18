@@ -4,7 +4,7 @@
   "description": "Reusable React component slider for showcasing technologies",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
-  "types": "dist/Slider.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "rollup -c"
   },
