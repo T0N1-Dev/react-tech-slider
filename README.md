@@ -1,6 +1,7 @@
 # 📛 react-tech-slider
 
-A reusable React component for displaying a sliding list of icons with continuous animation. Perfect for portfolios, agencies, landing pages, etc.
+A reusable and customizable **React slider component** to showcase brand logos or tech stacks with smooth infinite animation.  
+Perfect for portfolios, agency pages, SaaS websites, and more.
 
 ---
 
@@ -20,66 +21,93 @@ npm install react-tech-slider
 ## ✅ Basic Usage
 
 ```tsx
-import { Slider } from 'react-tech-slider/all-in-one';
+import { Slider } from 'react-tech-slider';
 
-export const techStack = [
-    {
-        id: 1,
-        name: 'Nike',
-        img: 'https://img.icons8.com/ios-filled/500/nike.png'
-    },
-    {
-        id: 2,
-        name: 'Adidas',
-        img: 'https://img.icons8.com/ios/500/adidas-trefoil.png'
-    },
-    {
-        id: 3,
-        name: 'Jordan',
-        img: 'https://img.icons8.com/ios/500/air-jordan.png'
-    }
-]
+const brands = [
+  {
+    id: 1,
+    name: 'Nike',
+    img: 'https://img.icons8.com/ios-filled/500/nike.png'
+  },
+  {
+    id: 2,
+    name: 'Adidas',
+    img: 'https://img.icons8.com/ios/500/adidas-trefoil.png'
+  },
+  {
+    id: 3,
+    name: 'Jordan',
+    img: 'https://img.icons8.com/ios/500/air-jordan.png'
+  }
+];
 
-<Slider technologies={techStack} />
+<Slider brandsList={brands} />
 ```
 
 ## ✨ Available Props
 
 | Prop | Type | Required | Description |
 |------|------|-----------|-------------|
-| `technologies` | `Technology[]` | ✅ | Array of technologies to display |
-| `borderColor` | `string` | ❌ | Color of top and bottom borders (#hex) |
-| `backgroundColor` | `string` | ❌ | Background color of the list (#hex) |
-| `borderWidth` | `number` | ❌ | Border width (px) |
-| `iconWidth` | `number` | ❌ | Icon width (rem) |
-| `iconHeight` | `number` | ❌ | Icon height (rem) |
+| `brandsList` | `Brand[]` | ✅ | Array of brands to render |
+| `borderColor` | `string` | ❌ | Top/bottom border color (#hex or CSS color) |
+| `backgroundColor` | `string` | ❌ | Background color (#hex, rgba, etc.) |
+| `borderWidth` | `number` | ❌ | Border thickness in pixels |
+| `iconWidth` | `number` | ❌ | 	Width of icons (in rem) — applied globally if individual width is not defined |
 
-### Interface
+### Brand Interface
 
 ```typescript
-interface Technology {
+interface Brand {
   id: number;
   name: string;
-  img: string | JSX.Element;
+  img: string;
+  width?: number; // rem
+  height?: number; // rem
+  style?: React.CSSProperties; 
+  className?: string;
 }
 ```
 
 ## 🎨 Customization
 
-- Supports SVG images as URLs or JSX components
-- Width, color and number of items are dynamic via props
-- Adaptable styles with media queries and CSS variables
+- Infinite scroll animation with CSS keyframes
+
+- Fully responsive with clamp() and media queries
+
+- Smart fallback to global or per-item icon sizing
+
+- Optional inline styles via style prop
+
+- Auto pausing animation on hover
+
+- Masked edge gradient for smooth visual cut-off
 
 ## 🧪 Fully Customized Example
 
 ```tsx
 <Slider 
-  technologies={techStack} 
-  borderWidth={2} 
-  borderColor='#0cf' 
-  backgroundColor='#9cf' 
-  iconWidth={7} 
-  iconHeight={7} 
+  brandsList={brands}
+  borderWidth={2}
+  borderColor="#0cf"
+  backgroundColor="#eef"
+  iconWidth={7}
+/>
+```
+- You can also define per-item sizes, class and styles:
+
+```tsx
+brandsList={[
+  {
+    id: 1,
+    name: 'Nike',
+    img: 'https://img.icons8.com/ios-filled/500/nike.png',
+    width: 10,
+    height: 10,
+    style: { 'background-color': 'white' },
+    className: 'nike-brand'
+  },
+  ...
+]}
 />
 ```
 
@@ -98,5 +126,7 @@ Pull requests and suggestions are welcome at
 
 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black?logo=github)](https://github.com/T0N1-Dev/react-tech-slider)
 [![npm](https://img.shields.io/npm/v/react-tech-slider)](https://www.npmjs.com/package/react-tech-slider?activeTab=readme)
+
+---
 
 
