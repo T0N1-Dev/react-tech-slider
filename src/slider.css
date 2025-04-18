@@ -3,9 +3,9 @@
 }
 
 .wrapper {
-    padding-top: 1rem;
+    padding: 1rem 0;
     width: 90%;
-    height: 100px;
+    height: clamp(3rem, 8vw, 100px);
     max-width: 1536px;
     margin-inline: auto;
     position: relative;
@@ -20,6 +20,9 @@
 }
 
 .brand-slider {
+    width: clamp(3rem, 7vw, 5rem);
+    height: auto;
+    margin-top: .7vw;
     color: white;
 }
 
@@ -97,12 +100,6 @@
 @media (max-width: 1024px) {
     .wrapper {
         margin-top: 3rem;
-        height: 4rem;
-    }
-
-    .brand-slider {
-        width: 3rem;
-        height: 3rem;
     }
 
     .item {

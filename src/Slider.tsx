@@ -13,7 +13,6 @@ export interface SliderProps {
   borderColor?: string;
   backgroundColor?: string;
   iconWidth?: number;
-  iconHeight?: number;
 }
 
 export const Slider: React.FC<SliderProps> = ({ 
@@ -21,8 +20,7 @@ export const Slider: React.FC<SliderProps> = ({
   borderWidth = 1, 
   borderColor = '#7c05d8',
   backgroundColor = '#00000033',
-  iconWidth = 5,
-  iconHeight = 5
+  iconWidth = 5
 }) => {
   return (
     <div 
@@ -46,7 +44,7 @@ export const Slider: React.FC<SliderProps> = ({
             src={img}
             alt={`${name}-icon`}
             className="brand-slider"
-            style={{width: `${iconWidth}rem`, height: `${iconHeight}rem`}}
+            style={{width: `${iconWidth}`}}
             width="50"
             height="50"
             loading="lazy"

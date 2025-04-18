@@ -11,6 +11,5 @@ export interface SliderProps {
     borderColor?: string;
     backgroundColor?: string;
     iconWidth?: number;
-    iconHeight?: number;
 }
 export declare const Slider: React.FC<SliderProps>;
