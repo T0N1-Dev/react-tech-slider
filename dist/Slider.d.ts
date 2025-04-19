@@ -15,5 +15,8 @@ export interface SliderProps {
     borderColor?: string;
     backgroundColor?: string;
     iconWidth?: number;
+    isPlay?: boolean;
+    pauseOnHoverActive?: boolean;
+    durationMs?: number;
 }
 export declare const Slider: React.FC<SliderProps>;

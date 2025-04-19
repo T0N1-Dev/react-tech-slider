@@ -17,6 +17,9 @@ export interface SliderProps {
   borderColor?: string;
   backgroundColor?: string;
   iconWidth?: number;
+  isPlay?: boolean;
+  pauseOnHoverActive?: boolean;
+  durationMs?: number;
 }
 
 export const Slider: React.FC<SliderProps> = ({ 
@@ -24,14 +27,18 @@ export const Slider: React.FC<SliderProps> = ({
   borderWidth = 1, 
   borderColor = '#7c05d8',
   backgroundColor = '#00000033',
-  iconWidth
+  iconWidth,
+  isPlay = true,
+  pauseOnHoverActive = false,
+  durationMs = 30000
 }) => {
   return (
     <div 
-      className="wrapper"
+      className={`wrapper ${ !isPlay ? 'wrapper-paused' : '' } ${ pauseOnHoverActive ? 'wrapper-paused-hover' : '' }`}
       style={
         {
           '--amount-brands': brandsList.length,
+          '--transition-slider-duration': `${durationMs / 1000}s`,
           borderTop: `${borderWidth}px solid ${borderColor}`,
           borderBottom: `${borderWidth}px solid ${borderColor}`,
           backgroundColor: `${backgroundColor}`
