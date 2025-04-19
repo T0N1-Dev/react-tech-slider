@@ -14,7 +14,7 @@ npm install react-tech-slider
 
 ## 🌐 Live Demo
 
-👉 [View Demo](https://stackblitz.com)
+👉 [View Demo](https://react-tech-slider-demo-git-main-t0n1-devs-projects.vercel.app/)
 
 ---
 
