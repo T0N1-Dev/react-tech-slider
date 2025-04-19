@@ -46,13 +46,16 @@ const brands = [
 
 ## ✨ Available Props
 
-| Prop | Type | Required | Description |
-|------|------|-----------|-------------|
-| `brandsList` | `Brand[]` | ✅ | Array of brands to render |
-| `borderColor` | `string` | ❌ | Top/bottom border color (#hex or CSS color) |
-| `backgroundColor` | `string` | ❌ | Background color (#hex, rgba, etc.) |
-| `borderWidth` | `number` | ❌ | Border thickness in pixels |
-| `iconWidth` | `number` | ❌ | 	Width of icons (in rem) — applied globally if individual width is not defined |
+| Prop                 | Type          | Required | Default        | Description |
+|----------------------|---------------|----------|----------------|-------------|
+| `brandsList`         | `Brand[]`     | ✅        | —              | Array of brands to render |
+| `borderColor`        | `string`      | ❌        | `#7c05d8`      | Top/bottom border color (#hex or CSS color) |
+| `backgroundColor`    | `string`      | ❌        | `#00000033`    | Background color (#hex, rgba, etc.) |
+| `borderWidth`        | `number`      | ❌        | `1`            | Border thickness in pixels |
+| `iconWidth`          | `number`      | ❌        | —              | Width of icons (in rem) — applied globally if individual width is not defined |
+| `isPlay`             | `boolean`     | ❌        | `true`         | Whether the animation is running (true) or paused (false) |
+| `pauseOnHoverActive` | `boolean`     | ❌        | `false`        | If true, the animation pauses on hover |
+| `durationMs`         | `number`      | ❌        | `30000`        | Time in milliseconds for one full animation loop |
 
 ### Brand Interface
 
@@ -70,17 +73,15 @@ interface Brand {
 
 ## 🎨 Customization
 
-- Infinite scroll animation with CSS keyframes
+- Smooth infinite animation via pure CSS
 
-- Fully responsive with clamp() and media queries
+- Global or per-brand sizing flexibility
 
-- Smart fallback to global or per-item icon sizing
+- Edge fade-out using mask-image for visual polish
 
-- Optional inline styles via style prop
+- Pause-on-hover option for user interaction
 
-- Auto pausing animation on hover
-
-- Masked edge gradient for smooth visual cut-off
+- Fully responsive layout
 
 ## 🧪 Fully Customized Example
 
@@ -90,8 +91,12 @@ interface Brand {
   borderWidth={2}
   borderColor="#0cf"
   backgroundColor="#eef"
-  iconWidth={7}
+  iconWidth={6}
+  isPlay={true}
+  pauseOnHoverActive={true}
+  durationMs={20000}
 />
+
 ```
 - You can also define per-item sizes, class and styles:
 
