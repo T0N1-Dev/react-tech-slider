@@ -96,7 +96,6 @@ interface Brand {
   pauseOnHoverActive={true}
   durationMs={20000}
 />
-
 ```
 - You can also define per-item sizes, class and styles:
 

@@ -7,9 +7,9 @@ Perfecto para portafolios, páginas de agencias, sitios SaaS y más.
 
 ## 🚀 Instalación
 
-bash  
+```bash  
 npm install react-tech-slider
-
+```
 ---
 
 ## 🌐 Demo en Vivo
@@ -48,13 +48,18 @@ const brands = [
 
 ## ✨ Props Disponibles
 
-| Propiedad        | Tipo      | Requerido | Descripción                                              |
-|------------------|-----------|-----------|----------------------------------------------------------|
-| brandsList       | Brand[]   | ✅         | Arreglo de marcas a renderizar                           |
-| borderColor      | string    | ❌         | Color del borde superior/inferior (#hex o color CSS)     |
-| backgroundColor  | string    | ❌         | Color de fondo (#hex, rgba, etc.)                        |
-| borderWidth      | number    | ❌         | Grosor del borde en píxeles                              |
-| iconWidth        | number    | ❌         | Ancho global de los íconos (en rem), si no se define uno por ítem |
+
+| Propiedades          | Tipo          | Requerido | Predeterminado | Descripción |
+|----------------------|---------------|------------|---------------|-------------|
+| `brandsList`         | `Brand[]`     | ✅        | —              | Arreglo de marcas para renderizar |
+| `borderColor`        | `string`      | ❌        | `#7c05d8`      | Color del borde superior/inferior (#hex o color CSS) |
+| `backgroundColor`    | `string`      | ❌        | `#00000033`    | Color de fondo (#hex, rgba, etc.) |
+| `borderWidth`        | `number`      | ❌        | `1`            | Grosor del borde en píxeles |
+| `iconWidth`          | `number`      | ❌        | —              | Ancho de los íconos (en rem) — se aplica globalmente si no se define un ancho individual |
+| `isPlay`             | `boolean`     | ❌        | `true`         | Si la animación está en reproducción (true) o pausada (false) |
+| `pauseOnHoverActive` | `boolean`     | ❌        | `false`        | Si es true, la animación se pausa al pasar el cursor por encima |
+| `durationMs`         | `number`      | ❌        | `30000`        | Tiempo en milisegundos para un ciclo completo de animación |
+
 
 ### Interfaz Brand
 
@@ -73,17 +78,15 @@ interface Brand {
 
 ## 🎨 Personalización
 
-- Animación de scroll infinita con keyframes en CSS
+- Animación infinita suave mediante CSS puro
 
-- Totalmente responsivo con `clamp()` y media queries
+- Flexibilidad de tamaño global o por marca
 
-- Fallback inteligente para el tamaño de íconos global o por ítem
+- Desvanecimiento en los bordes usando mask-image para un acabado visual pulido
 
-- Estilos en línea opcionales a través de la prop `style`
+- Opción de pausa al pasar el cursor por encima
 
-- Pausa automática de la animación al hacer hover
-
-- Gradiente en los bordes para un corte visual más suave
+- Diseño totalmente responsive
 
 ---
 
@@ -95,7 +98,10 @@ interface Brand {
   borderWidth={2}
   borderColor="#0cf"
   backgroundColor="#eef"
-  iconWidth={7}
+  iconWidth={6}
+  isPlay={true}
+  pauseOnHoverActive={true}
+  durationMs={20000}
 />
 ```
 - También puedes definir tamaños, clases y estilos por ítem:
@@ -120,10 +126,10 @@ brandsList={[
 
 ## 📦 Compilar y Publicar
 
-bash  
+```bash  
 npm run build  
 npm publish
-
+```
 ---
 
 ## 🤝 Contribuciones
