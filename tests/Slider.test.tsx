@@ -29,7 +29,6 @@ describe('Slider tests', () => {
                 borderWidth={3}
                 backgroundColor = 'red'
                 iconWidth = {10}
-                iconHeight = {10}
             />
         );
 

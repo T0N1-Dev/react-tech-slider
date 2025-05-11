@@ -109,17 +109,7 @@
 }
 
 @media (max-width: 1024px) {
-    .wrapper {
-        margin-top: 3rem;
-    }
-
     .item {
         left: max(calc(-3rem * var(--amount-brands)), 100%);
-    }
-}
-
-@media (max-height: 699px) {
-    .wrapper {
-        margin-top: calc(5vh + 100px);
     }
 }
